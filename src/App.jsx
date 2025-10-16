@@ -4,10 +4,12 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import {BrowserRouter as Router,Route,Routes } from 'react-router-dom';
 import Home from './screens/Home';
+import Navbar from './components/Navbar';
 
 export default function App() {
   return (
     <Router >
+      <Navbar/>
       <main>
         <Routes>
           <Route path='/' element={<Home/>}/>
