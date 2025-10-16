@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
+import Accordion from '../components/Accordion';
 
 export default function Home() {
   return (
@@ -105,7 +106,112 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </div>
+      {/* why choose us */}
+      <div className="container mx-auto h-[80vh] my-2 p-2">
+        <div className='flex -1 p-2 h-full'>
+          <div className='flex flex-col md:flex-row w-full '>
+            <div className=' flex-1 flex flex-col justify-center '>
+              <span className='font-sans text-2xl font-bold md:text-4xl justify-start flex'>Your Smile, Our Priority</span>
+                <p className="font-open text-gray-600 text-xs md:text-sm justify-end flex my-5">
+                  We combine modern technology, gentle care, and a patient-first approach to make every visit comfortable, effective, and personalized. From routine checkups to advanced treatments, our expert team ensures your smile stays healthy, confident, and stress-free.
+                </p>
+                <div className='space-y-2'>
+                  <Accordion 
+                    id='1' 
+                    title={'How often should I visit the dentist?'} 
+                    content={'We recommend a routine dental checkup every six months to maintain optimal oral health, detect potential issues early, and keep your smile bright.'}/>
+                  <Accordion 
+                    id='2'
+                    title={'Are dental treatments painful?'} 
+                    content={'Our team uses the latest technology and gentle techniques to minimize discomfort. Many procedures are virtually painless, and we provide options for sedation or numbing when needed.'}/>
+                  <Accordion 
+                    id='3' 
+                    title={'Do you accept dental insurance?'} 
+                    content={'Yes! We accept most major dental insurance plans and can help you maximize your benefits. For self-pay patients, we also offer flexible payment options.'}/>
+                  <Accordion 
+                    id='4' 
+                    title={'What should I do in a dental emergency?'} 
+                    content={'Contact us immediately. Our team provides emergency care for issues like severe tooth pain, broken teeth, or injury, and we’ll guide you on the best steps to protect your oral health.'}/>
+                </div>
+            </div>
+            <div className=' p-5 flex-1 justify-center'>
+              <img src="" alt="img" />
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* perks w location */}
+      <div className="container mx-auto my-2 p-2 space-y-5 ">
+        <span className="font-sans text-2xl font-bold md:text-3xl justify-center flex">
+          Caring for Your Smile, Every Step of the Way
+        </span>
+        <span className="font-open text-gray-600 mt-2 text-xs md:text-sm justify-center flex text-center">
+          Combining expert care with a warm, welcoming environment to make every <br />visit comfortable, stress-free, and tailored to your smile.
+        </span>
+        <div className='flex flex-col md:flex-row w-full space-x-2 space-y-5'>
+          <div className=' flex-1 flex flex-col justify-center '>
+            <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1327.4568408148245!2d121.0961621900777!3d14.646203881952653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b9c60642d16f%3A0xe1d442718cbbfe43!2sDe%20Vera.%20Velarde%20Dental%20Clinic!5e0!3m2!1sen!2sph!4v1760600606742!5m2!1sen!2sph"
+            width="100%"
+            height="350px"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className='rounded-xl'
+          ></iframe>
+          </div>
+          <div className=' flex-1 flex flex-col space-y-3 px-5 justify-center'>
+            <div className="flex flex-col space-y-2">
+              <div className="flex space-x-2 items-center">
+                <i className="fa fa-solid fa-location-pin text-md "></i>
+                <span>J3WW+9P8, J. P. Rizal St, Marikina, 1800 Metro Manila</span>
+              </div>
+              <div className="flex space-x-2 items-center">
+                <i className="fa fa-solid fa-phone text-md "></i>
+                <span>0907 378 5231</span>
+              </div>
+              <div className="flex space-x-2 items-center">
+                <i className="fa fa-solid fa-envelope text-md"></i>
+                <span>dvdc.dental@gmail.com</span>
+              </div>
+              <div className="flex space-x-2 items-center">
+                <i class="fa fa-brands fa-facebook-messenger"></i>
+                <a href="https://www.facebook.com/DVdentalclinic/">De Vera-Velarde Dental Clinic</a>
+              </div>
+            </div>
+            <div className='grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 gap-2 '>
+              <div className="w-full  rounded-md flex space-x-2 items-center py-4">
+                <i className="fa fa-solid fa-wind text-md"></i>
+                <span className='font-open'>Air Conditioned</span>
+              </div>
+              <div className="w-full  rounded-md flex space-x-2 items-center py-4">
+                <i className="fa fa-solid fa-wifi text-md"></i>
+                <span className='font-open'>Wifi Connection</span>
+              </div>
+              <div className="w-full rounded-md flex space-x-2 items-center py-4">
+                <i className="fa fa-solid fa-toilet text-md"></i>
+                <span className='font-open'>Accessible Restroom</span>
+              </div>
+              <div className="w-full rounded-md flex space-x-2 items-center py-4">
+                <i className="fa fa-solid fa-couch text-md"></i>
+                <span className='font-open'>Comfortable Sitting</span>
+              </div>
+              <div className="w-full rounded-md flex space-x-2 items-center py-4">
+                <i className="fa fa-solid fa-hand-sparkles text-md"></i>
+                <span className='font-open'>Sanitized Equipment</span>
+              </div>
+              <div className="w-full rounded-md flex space-x-2 items-center py-4">
+                <i className="fa fa-solid fa-clock text-md"></i>
+                <span className='font-open'>Flexible Hours</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      {/* faqs */}
+      {/* reviews */}
+    </div>
   );
 }
